@@ -1,1 +1,1 @@
-# SQL-Projects
+# SQL-Projects for CS253 Introduction to Database Systems
