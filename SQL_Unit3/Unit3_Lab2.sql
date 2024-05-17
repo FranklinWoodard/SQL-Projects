@@ -22,7 +22,9 @@ CREATE TABLE LessonSchedule (
     HorseID         SMALLINT UNSIGNED NOT NULL,
     StudentID       SMALLINT UNSIGNED, 
     LessonDateTime  DATETIME NOT NULL,
-    PRIMARY KEY (HorseID, LessonDateTime)
-    FOREIGN KEY HorseID REFERENCES Horse(ID),
-    FOREIGN KEY StudentID REFERENCES Student(ID),
+    PRIMARY KEY (HorseID, LessonDateTime),
+    FOREIGN KEY (HorseID) REFERENCES Horse(ID)
+        ON DELETE CASCADE,
+    FOREIGN KEY (StudentID) REFERENCES Student(ID)
+        ON DELETE SET NULL
 );
