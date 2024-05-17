@@ -13,3 +13,14 @@ Change the registered name to Lady Luck and birth date to May 1, 2015 for horse 
 Change every horse breed to NULL for horses born on or after December 22, 2016.
 */
 
+UPDATE Horse
+SET Height = 15.6
+WHERE ID = 2;
+
+UPDATE Horse
+SET RegisteredName = 'Lady Luck', BirthDate = '2015-05-01'
+WHERE ID = 4;
+
+UPDATE Horse
+SET Breed = NULL
+WHERE BirthDate >= '2016-12-22';
